@@ -1,0 +1,13 @@
+[Unit]
+Description=MonitorUsersActivity
+After=dbus.service
+
+[Service]
+Type=simple
+User=root
+Group=root
+ExecStart=/usr/bin/server_watcher.sh
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
